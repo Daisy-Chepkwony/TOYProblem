@@ -7,6 +7,8 @@ let extra_taxable_pay;
 let netSalary;
 let grossPay=parseInt(prompt("Enter the Amount:"));
 //PAYEE
+// function for payee
+//calculate the payee when prompt to enter amount 
 function payeeTax(amount){
     if(amount<=24000){
         payee=amount*0.1
@@ -26,10 +28,10 @@ function payeeTax(amount){
     }
 
 }
-const paye=payeeTax(grossPay);
+const paye=payeeTax(grossPay);//calls a function
 
 //NHIF
-
+//calculates the nhif
 
 function nhifDeducations(amount){
     if(amount<=5999){
@@ -51,6 +53,7 @@ function nhifDeducations(amount){
     }
 const NHIF=nhifDeducations(grossPay);
 //NSSF
+// calculates the nssf
 function pensionablePay(amount){
     let tier1=((amount*6)/100);
     if(amount<=6000){
